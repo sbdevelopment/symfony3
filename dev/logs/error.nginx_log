@@ -1,0 +1,122 @@
+2018/02/12 12:07:53 [error] 22712#22712: *1 directory index of "/home/sanan/www/test.ru/web/" is forbidden, client: 127.0.0.1, server: test.ru, request: "GET / HTTP/1.1", host: "test.ru"
+2018/02/12 12:07:55 [error] 22712#22712: *1 directory index of "/home/sanan/www/test.ru/web/" is forbidden, client: 127.0.0.1, server: test.ru, request: "GET / HTTP/1.1", host: "test.ru"
+2018/02/12 12:11:57 [error] 22712#22712: *2 directory index of "/home/sanan/www/test.ru/web/" is forbidden, client: 127.0.0.1, server: test.ru, request: "GET / HTTP/1.1", host: "test.ru"
+2018/02/12 12:13:28 [crit] 23869#23869: *1 connect() to unix:/var/run/php7.1-fpm.sock failed (2: No such file or directory) while connecting to upstream, client: 127.0.0.1, server: test.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php7.1-fpm.sock:", host: "test.ru"
+2018/02/12 12:13:30 [crit] 23869#23869: *1 connect() to unix:/var/run/php7.1-fpm.sock failed (2: No such file or directory) while connecting to upstream, client: 127.0.0.1, server: test.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php7.1-fpm.sock:", host: "test.ru"
+2018/02/12 12:16:48 [error] 24044#24044: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught RuntimeException: Unable to create the cache directory (/home/sanan/www/test.ru/var/cache/prod)
+ in /home/sanan/www/test.ru/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:763
+Stack trace:
+#0 /home/sanan/www/test.ru/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(642): Symfony\Component\HttpKernel\Kernel->buildContainer()
+#1 /home/sanan/www/test.ru/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(137): Symfony\Component\HttpKernel\Kernel->initializeContainer()
+#2 /home/sanan/www/test.ru/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(197): Symfony\Component\HttpKernel\Kernel->boot()
+#3 /home/sanan/www/test.ru/web/app.php(19): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#4 {main}
+  thrown in /home/sanan/www/test.ru/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php on line 763" while reading response header from upstream, client: 127.0.0.1, server: test.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.1-fpm.sock:", host: "test.ru"
+2018/02/12 18:34:31 [crit] 16999#16999: *1 connect() to unix:/var/run/php7.1-fpm.sock failed (2: No such file or directory) while connecting to upstream, client: 127.0.0.1, server: test.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php7.1-fpm.sock:", host: "test.ru"
+2018/02/13 04:02:04 [info] 2218#2218: *179 client 127.0.0.1 closed keepalive connection
+2018/02/13 04:02:36 [info] 2218#2218: *181 client 127.0.0.1 closed keepalive connection
+2018/02/13 04:05:50 [info] 2218#2218: *183 client 127.0.0.1 closed keepalive connection
+2018/02/13 04:06:49 [info] 2218#2218: *185 client 127.0.0.1 closed keepalive connection
+2018/02/13 04:07:19 [info] 2218#2218: *187 client 127.0.0.1 closed keepalive connection
+2018/02/13 04:07:39 [info] 2218#2218: *189 client 127.0.0.1 closed keepalive connection
+2018/02/13 04:08:07 [info] 2218#2218: *191 client 127.0.0.1 closed keepalive connection
+2018/02/13 04:15:09 [info] 2218#2218: *193 client 127.0.0.1 closed keepalive connection
+2018/02/13 04:15:51 [info] 2218#2218: *195 client 127.0.0.1 closed keepalive connection
+2018/02/13 04:16:21 [info] 2218#2218: *197 client 127.0.0.1 closed keepalive connection
+2018/02/13 04:16:40 [info] 2218#2218: *199 client 127.0.0.1 closed keepalive connection
+2018/02/13 04:17:55 [info] 2218#2218: *201 client 127.0.0.1 closed keepalive connection
+2018/02/13 04:19:30 [info] 2218#2218: *203 client 127.0.0.1 closed keepalive connection
+2018/02/13 04:19:43 [info] 2218#2218: *205 client 127.0.0.1 closed keepalive connection
+2018/02/13 04:20:31 [info] 2218#2218: *207 client 127.0.0.1 closed keepalive connection
+2018/02/13 04:23:12 [info] 2218#2218: *209 client 127.0.0.1 closed keepalive connection
+2018/02/13 04:23:23 [info] 2218#2218: *211 client 127.0.0.1 closed keepalive connection
+2018/02/13 05:08:57 [info] 2218#2218: *215 client 127.0.0.1 closed keepalive connection
+2018/02/13 05:09:50 [info] 2218#2218: *217 client 127.0.0.1 closed keepalive connection
+2018/02/13 05:09:55 [info] 2218#2218: *219 client 127.0.0.1 closed keepalive connection
+2018/02/13 05:10:03 [info] 2218#2218: *221 client 127.0.0.1 closed keepalive connection
+2018/02/13 05:10:09 [info] 2218#2218: *222 client 127.0.0.1 closed keepalive connection
+2018/02/13 10:41:01 [info] 2218#2218: *224 client 127.0.0.1 closed keepalive connection
+2018/02/13 10:52:43 [info] 2218#2218: *226 client 127.0.0.1 closed keepalive connection
+2018/02/13 10:53:37 [info] 2218#2218: *228 client 127.0.0.1 closed keepalive connection
+2018/02/13 10:55:56 [info] 2218#2218: *230 client 127.0.0.1 closed keepalive connection
+2018/02/13 10:56:08 [info] 2218#2218: *232 client 127.0.0.1 closed keepalive connection
+2018/02/13 10:57:39 [info] 2218#2218: *234 client 127.0.0.1 closed keepalive connection
+2018/02/13 10:57:59 [info] 2218#2218: *236 client 127.0.0.1 closed keepalive connection
+2018/02/13 10:58:10 [info] 2218#2218: *238 client 127.0.0.1 closed keepalive connection
+2018/02/13 10:58:18 [info] 2218#2218: *240 client 127.0.0.1 closed keepalive connection
+2018/02/13 10:58:30 [info] 2218#2218: *242 client 127.0.0.1 closed keepalive connection
+2018/02/13 10:58:58 [info] 2218#2218: *244 client 127.0.0.1 closed keepalive connection
+2018/02/14 12:36:12 [info] 2218#2218: *312 client 127.0.0.1 closed keepalive connection
+2018/02/14 12:37:11 [info] 2218#2218: *314 client 127.0.0.1 closed keepalive connection
+2018/02/14 12:38:16 [info] 2218#2218: *316 client 127.0.0.1 closed keepalive connection
+2018/02/14 12:38:51 [info] 2218#2218: *324 client 127.0.0.1 closed keepalive connection
+2018/02/14 12:43:44 [info] 2218#2218: *329 client 127.0.0.1 closed keepalive connection
+2018/02/14 12:48:20 [info] 2218#2218: *338 client 127.0.0.1 closed keepalive connection
+2018/02/14 13:07:51 [info] 2218#2218: *349 client 127.0.0.1 closed keepalive connection
+2018/02/14 13:08:23 [info] 2218#2218: *353 client 127.0.0.1 closed keepalive connection
+2018/02/14 13:11:40 [info] 2218#2218: *355 client 127.0.0.1 closed keepalive connection
+2018/02/14 13:12:30 [info] 2218#2218: *357 client 127.0.0.1 closed keepalive connection
+2018/02/14 13:14:57 [info] 2218#2218: *359 client 127.0.0.1 closed keepalive connection
+2018/02/14 13:18:53 [info] 2218#2218: *361 client 127.0.0.1 closed keepalive connection
+2018/02/14 13:40:44 [info] 2218#2218: *370 client 127.0.0.1 closed keepalive connection
+2018/02/14 13:41:42 [info] 2218#2218: *372 client 127.0.0.1 closed keepalive connection
+2018/02/14 13:48:40 [info] 2218#2218: *379 client 127.0.0.1 closed keepalive connection
+2018/02/14 13:58:13 [info] 2218#2218: *385 client 127.0.0.1 closed keepalive connection
+2018/02/14 13:59:46 [info] 2218#2218: *389 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:02:23 [info] 2218#2218: *396 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:04:14 [info] 2218#2218: *398 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:04:53 [info] 2218#2218: *400 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:06:48 [info] 2218#2218: *402 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:15:20 [info] 2218#2218: *404 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:19:17 [info] 2218#2218: *406 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:22:28 [info] 2218#2218: *408 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:26:14 [info] 2218#2218: *410 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:27:07 [info] 2218#2218: *412 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:27:37 [info] 2218#2218: *414 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:40:31 [info] 2218#2218: *416 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:41:30 [info] 2218#2218: *418 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:42:13 [info] 2218#2218: *420 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:42:37 [info] 2218#2218: *422 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:44:49 [info] 2218#2218: *429 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:45:46 [info] 2218#2218: *438 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:47:26 [info] 2218#2218: *440 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:49:02 [info] 2218#2218: *453 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:50:35 [info] 2218#2218: *455 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:51:42 [info] 2218#2218: *457 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:52:43 [info] 2218#2218: *459 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:53:33 [info] 2218#2218: *461 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:54:24 [info] 2218#2218: *463 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:54:41 [info] 2218#2218: *465 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:55:44 [info] 2218#2218: *467 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:56:44 [info] 2218#2218: *478 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:57:16 [info] 2218#2218: *480 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:57:45 [info] 2218#2218: *482 client 127.0.0.1 closed keepalive connection
+2018/02/14 14:58:26 [info] 2218#2218: *484 client 127.0.0.1 closed keepalive connection
+2018/02/14 15:27:39 [info] 2218#2218: *486 client 127.0.0.1 closed keepalive connection
+2018/02/14 15:29:49 [info] 2218#2218: *499 client 127.0.0.1 closed keepalive connection
+2018/02/14 15:31:16 [info] 2218#2218: *501 client 127.0.0.1 closed keepalive connection
+2018/02/14 15:32:43 [info] 2218#2218: *508 client 127.0.0.1 closed keepalive connection
+2018/02/14 15:33:35 [info] 2218#2218: *510 client 127.0.0.1 closed keepalive connection
+2018/02/14 15:36:43 [info] 2218#2218: *512 client 127.0.0.1 closed keepalive connection
+2018/02/14 15:37:10 [info] 2218#2218: *514 client 127.0.0.1 closed keepalive connection
+2018/02/14 15:46:09 [info] 2218#2218: *516 client 127.0.0.1 closed keepalive connection
+2018/02/14 16:43:54 [info] 2218#2218: *521 client 127.0.0.1 closed keepalive connection
+2018/02/14 16:44:50 [info] 2218#2218: *527 client 127.0.0.1 closed keepalive connection
+2018/02/14 16:46:05 [info] 2218#2218: *529 client 127.0.0.1 closed keepalive connection
+2018/02/14 16:46:17 [info] 2218#2218: *531 client 127.0.0.1 closed keepalive connection
+2018/02/14 16:58:10 [info] 2218#2218: *540 client 127.0.0.1 closed keepalive connection
+2018/02/14 17:02:41 [info] 2218#2218: *542 client 127.0.0.1 closed keepalive connection
+2018/02/14 17:05:14 [info] 2218#2218: *544 client 127.0.0.1 closed keepalive connection
+2018/02/14 17:05:22 [info] 2218#2218: *546 client 127.0.0.1 closed keepalive connection
+2018/02/14 17:09:49 [info] 2218#2218: *548 client 127.0.0.1 closed keepalive connection
+2018/02/14 17:10:27 [info] 2218#2218: *550 client 127.0.0.1 closed keepalive connection
+2018/02/14 17:11:48 [info] 2218#2218: *552 client 127.0.0.1 closed keepalive connection
+2018/02/14 17:12:53 [info] 2218#2218: *554 client 127.0.0.1 closed keepalive connection
+2018/02/14 17:14:48 [info] 2218#2218: *556 client 127.0.0.1 closed keepalive connection
+2018/02/14 17:18:44 [info] 2218#2218: *558 client 127.0.0.1 closed keepalive connection
+2018/02/14 17:26:55 [info] 2218#2218: *560 client 127.0.0.1 closed keepalive connection
+2018/02/14 17:27:06 [info] 2218#2218: *562 client 127.0.0.1 closed keepalive connection
+2018/02/14 17:29:06 [info] 2218#2218: *564 client 127.0.0.1 closed keepalive connection
+2018/02/14 17:29:46 [info] 2218#2218: *566 client 127.0.0.1 closed keepalive connection
+2018/02/14 17:30:10 [info] 2218#2218: *568 client 127.0.0.1 closed keepalive connection
+2018/02/14 17:30:51 [info] 2218#2218: *576 client 127.0.0.1 closed keepalive connection
