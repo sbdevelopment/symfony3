@@ -32,6 +32,8 @@ services:
     AppBundle\Service\JwtManager:
         arguments:
             $jwtKey: 'Dew$2lEr90#14b'
+    AppBundle\Service\UserManager:
+        public: true
     AppBundle\DataFixtures\:
         resource: '../../src/AppBundle/DataFixtures/*'
         tags: ['doctrine.fixture.orm']

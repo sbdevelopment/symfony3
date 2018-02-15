@@ -4,6 +4,7 @@ namespace AppBundle\DataFixtures;
 
 use AppBundle\Entity\User;
 
+use AppBundle\Service\UserManager;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -37,7 +38,7 @@ class Users implements OrderedFixtureInterface, FixtureInterface
             $user = new User();
             $user->setUsername($data['username']);
             $user->setEmail($data['email']);
-            $user->setPassword($this->passwordHash($data['password']));
+            $user->setPassword(UserManager::passwordHash($data['password']));
             $user->setLocation($data['location']);
 
             $em->persist($user);
@@ -52,9 +53,5 @@ class Users implements OrderedFixtureInterface, FixtureInterface
     public function getOrder()
     {
         return 1;
-    }
-
-    private function passwordHash(string $password) {
-        return md5(base64_encode(md5(base64_encode(md5($password.'0Wqlf$elr4sorE#k')))));
     }
 }

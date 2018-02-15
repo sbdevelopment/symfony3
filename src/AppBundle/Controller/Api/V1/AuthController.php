@@ -3,7 +3,9 @@
 namespace AppBundle\Controller\Api\V1;
 
 use AppBundle\Entity\User;
+
 use AppBundle\Service\JwtManager;
+use AppBundle\Service\UserManager;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -37,7 +39,7 @@ class AuthController extends Controller
         /** @var User $user */
         $user = $this->getDoctrine()->getRepository(User::class)->findOneBy([
             'username' => $username,
-            'password' => $this->passwordHash($password)
+            'password' => UserManager::passwordHash($password)
         ]);
 
         if (!($user instanceof User)) {

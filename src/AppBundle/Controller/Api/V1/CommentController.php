@@ -3,10 +3,13 @@
 namespace AppBundle\Controller\Api\V1;
 
 use AppBundle\Entity\Comment;
-use AppBundle\Service\JwtManager;
+use AppBundle\Service\UserManager;
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Comment controller.
@@ -15,6 +18,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component
  */
 class CommentController extends Controller
 {
+
     /**
      * Lists all comment entities.
      *
@@ -48,16 +52,16 @@ class CommentController extends Controller
      * @Route("/comments", name="comment_new")
      * @Method("POST")
      */
-    public function newAction(Request $request, JwtManager $jwt)
+    public function newAction(Request $request, UserManager $userManager)
     {
-        $auth = trim(str_replace('Bearer ','',$request->headers->get('Authorization')));
+        $authorized = $userManager->checkAuthFromRequest($request);
 
-        if($jwt->getExpiringTimestampForToken($auth) < time()) {
+        if($authorized === null) {
             $this->returnJsonAndExit('Вы должны авторизоваться','error',401);
         }
 
         $data = [
-            'authorId' => $jwt->getUserIdFromPayload(),
+            'authorId' => $authorized->getUserIdFromPayload(),
             'body' => $request->request->get('body'),
             'createdAt' => \DateTime::createFromFormat(DATE_ISO8601, date(DATE_ISO8601))
         ];
@@ -86,11 +90,11 @@ class CommentController extends Controller
      * @Route("/comments/{id}", name="comment_delete")
      * @Method("DELETE")
      */
-    public function deleteAction($id, Request $request, JwtManager $jwt)
+    public function deleteAction($id, Request $request, UserManager $userManager)
     {
-        $auth = trim(str_replace('Bearer ','',$request->headers->get('Authorization')));
+        $authorized = $userManager->checkAuthFromRequest($request);
 
-        if($jwt->getExpiringTimestampForToken($auth) < time()) {
+        if($authorized === null) {
             $this->returnJsonAndExit('Вы должны авторизоваться','error',401);
         }
 
@@ -100,7 +104,7 @@ class CommentController extends Controller
             $this->returnJsonAndExit('Удаляемый комментарий не найден','error', 404);
         }
 
-        if($comment->getAuthorId() !== $jwt->getUserIdFromPayload()) {
+        if($comment->getAuthorId() !== $authorized->getUserIdFromPayload()) {
             $this->returnJsonAndExit('Вы не можете удалить чужой комментарий','error', 403);
         }
 
